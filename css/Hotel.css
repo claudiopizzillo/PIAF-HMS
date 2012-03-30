@@ -1,0 +1,108 @@
+body {
+	background-color: #ffffff;
+	background-image: url(../img/Bk_Admin.gif);
+	background-repeat: repeat-x;
+    margin:0;
+    padding:0;
+}
+
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 32px;
+	line-height:40px;
+	color:#ffffff;
+	padding:0;
+	margin:48px 0 12px 0;
+	border-bottom: 2px solid #ffffff;
+}
+
+#Content {
+    width:900px;
+    vertical-align:top;
+    text-align:center;
+	margin:0 auto 0 auto;
+	}
+
+#Content td{
+	line-height:24px;
+	background-color:#FFF;
+	margin:5px 0 5px 0;
+	border-bottom:2px solid #036;
+	display:table-cell;
+	}
+
+#Menu2 {
+	line-height:32px;
+	background-color:#369;
+	margin:5px 0 5px 0;
+	color:#CCF;
+	font-size:16px;
+}
+
+#Menu2 td{
+	line-height:32px;
+	font-size:16px;	
+	background-color:#369;
+	border-bottom:0;
+	display:table-cell;
+}
+
+#Menu2 a{
+	color: #FFF;
+	text-decoration:none;
+	margin: 0 20px 0 0;
+}
+
+#HeadLine {
+    position:absolute;
+    left:0;
+    top:0;
+	line-height::32px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:30px;
+	color:#036;
+}
+
+#MenuTop {
+	height:32px;
+    position:absolute;
+    left:0;
+    top:0;
+	margin:0 0 0 300px;
+	line-height:32px;
+}
+
+#MenuTop a{
+float:left;
+margin: 0 15px 0 0;
+text-decoration:none;
+color:#666;
+}
+
+#MenuTop a:hover{
+color:#c00;
+}
+
+#MenuTop img{
+float:left;
+border:0;
+}
+
+
+.Cella00 {
+	color: #336699;
+	width: 20px;
+}
+
+
+
+
