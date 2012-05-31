@@ -19,8 +19,10 @@ if(isset($_POST['INSERT'])) :
        $MM=$_POST['MM'];
        $Ext=$_POST['RoomsComboBox'];
 	$ourFileName = $HH.$MM.".ext.".$Ext.".call";
-	$parm_call_dir = '/var/spool/asterisk/outgoing/';
+	$parm_call_dir_outgoing = '/var/spool/asterisk/outgoing/';
+	$parm_call_dir = '/var/spool/asterisk/tmp/';
        $callfile = $parm_call_dir.$ourFileName;
+	$callfile_out = $parm_call_dir_outgoing.$ourFileName;
 
 	//Check if wake-up exists for this ext and delete it
 	//$dir1 = "/var/spool/asterisk/outgoing";
@@ -35,7 +37,7 @@ if(isset($_POST['INSERT'])) :
 	$time_now = time( );
 	if ( $time_wakeup <= $time_now )
 		$time_wakeup += 86400; // Add One Day on
-	//touch($callfile, $time_wakeup, $time_wakeup );
+
 
        $wuc = fopen($callfile, 'w');
 	$stringData = "channel: Local/".$Ext."@from-internal\n";
@@ -55,6 +57,7 @@ if(isset($_POST['INSERT'])) :
        fclose($wuc);
 
 	touch($callfile, $time_wakeup, $time_wakeup );
+	rename($callfile, $callfile_out);
 endif;
 
 	function CheckWakeUp($file) {
